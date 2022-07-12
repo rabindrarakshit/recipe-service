@@ -1,0 +1,40 @@
+{
+  "recipes": [
+    {
+      "recipeId": 1,
+      "name": "pizza",
+      "numberOfServings": 2,
+      "ingredients": [
+        "flour", "paprika"
+      ],
+      "instructions": [
+        "oven"
+      ],
+      "isVeg": false
+    },
+    {
+      "recipeId": 2,
+      "name": "pasta",
+      "numberOfServings": 1,
+      "ingredients": [
+        "wheat"
+      ],
+      "instructions": [
+        "pan"
+      ],
+      "isVeg": true
+    },
+    {
+      "recipeId": 3,
+      "name": "butter chicken",
+      "numberOfServings": 3,
+      "ingredients": [
+        "chicken"
+      ],
+      "instructions": [
+        "oven"
+      ],
+      "isVeg": false
+    }
+  ]
+}

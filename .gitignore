@@ -1,0 +1,24 @@
+# Intellij
+.idea/
+*.iml
+*.iws
+out/
+
+# Eclipse
+.settings/
+*.project
+*.classpath
+.prefs
+*.prefs
+.metadata/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+*.class
+
+# Maven
+log/*
+target/

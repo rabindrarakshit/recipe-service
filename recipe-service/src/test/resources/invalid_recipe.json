@@ -1,0 +1,12 @@
+{
+  "recipeId": 1,
+  "name": "pizza",
+  "numberOfServings": -2,
+  "ingredients": [
+    "flour", "paprika"
+  ],
+  "instructions": [
+    "oven"
+  ],
+  "isVeg": false
+}
