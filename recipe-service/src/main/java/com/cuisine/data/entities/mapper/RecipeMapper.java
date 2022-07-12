@@ -9,6 +9,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+// Class to convert business to entity models and vice versa
+
 public class RecipeMapper {
     public static Recipe convertEntityToBusinessModel(RecipeEntity recipeEntity) {
         Recipe recipe = new Recipe();

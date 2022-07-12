@@ -82,17 +82,22 @@ Once the application is started you can test it here :
 http://localhost:8080/swagger-ui/index.html
 ``
 
+**TIP**
+
+You can use the valid data mentioned in the json files from src/test/resources to test the api's.
+
 **Unit/Integration tests**
 
 Both Unit and Integration tests has been written (as much possible in the given time :) )
 Execute it separately using IDE or by maven commands.
 
-NOTE
-==================
+TODO/Probable Improvements:
+============================
 
 1. Authentication and Aspects has not been added as of now due to time constraints. It can be extended easily later.
 
-2. Custom Exceptions and Mappers has been added to cover the boundary conditions as much possible.
+2. Custom Exceptions and Mappers has been added to cover the boundary conditions as much possible. May be some more exhaustive 
+scenarios could have been covered.
 
 
 

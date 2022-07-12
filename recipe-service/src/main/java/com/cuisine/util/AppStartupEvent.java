@@ -7,6 +7,8 @@ import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
 
+// Class used to do the initial checks before we can consider the service as ready
+
 @Component
 public class AppStartupEvent implements ApplicationListener<ApplicationReadyEvent> {
 

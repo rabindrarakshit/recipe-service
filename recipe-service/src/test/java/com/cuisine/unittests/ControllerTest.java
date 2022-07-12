@@ -58,7 +58,7 @@ public class ControllerTest {
     public void testCreateRecipe() {
         Mockito.doNothing().when(recipeService).createRecipe(recipe);
         ResponseEntity responseEntity = recipeController.createRecipe(recipe);
-        assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
+        assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.CREATED);
     }
 
     @Test
@@ -69,7 +69,7 @@ public class ControllerTest {
     @Test
     public void testUpdateRecipe() {
         Mockito.doNothing().when(recipeService).updateRecipe(1L, recipe);
-        ResponseEntity responseEntity = recipeController.updateRecipe(recipe.getRecipeId(), recipe);
+        ResponseEntity responseEntity = recipeController.updateRecipe(1L, recipe);
         assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
     }
 

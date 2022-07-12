@@ -16,6 +16,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import static com.cuisine.data.entities.mapper.RecipeMapper.*;
+
 @Service
 public class RecipeService {
     private final RecipeRepository recipeRepository;
@@ -66,7 +68,7 @@ public class RecipeService {
     }
 
     public void createRecipe(Recipe recipe) {
-        recipeRepository.save(RecipeMapper.convertBusinessToEntityModel(recipe));
+        recipeRepository.save(convertBusinessToEntityModel(recipe));
     }
 
     public void updateRecipe(Long recipeId, Recipe recipe) {
@@ -76,16 +78,16 @@ public class RecipeService {
         }
         RecipeEntity recipeEntity = recipeEntityOptional.get();
         if (StringUtils.isNotEmpty(recipe.getName())) {
-            recipeEntity.setName(recipe.getName());
+            recipeEntity.setName(StringUtils.lowerCase(recipe.getName()));
         }
         if (recipe.getIsVeg() != null) {
             recipeEntity.setIsVeg(recipe.getIsVeg());
         }
         if (!CollectionUtils.isEmpty(recipe.getIngredients())) {
-            recipeEntity.setIngredients(RecipeMapper.convertListToCSV(recipe.getIngredients()));
+            recipeEntity.setIngredients(convertListToCSV(convertListToLowerCase(recipe.getIngredients())));
         }
         if (!CollectionUtils.isEmpty(recipe.getInstructions())) {
-            recipeEntity.setInstructions(RecipeMapper.convertListToCSV(recipe.getInstructions()));
+            recipeEntity.setInstructions(convertListToCSV(convertListToLowerCase(recipe.getInstructions())));
         }
         if (recipe.getNumberOfServings() != null) {
             recipeEntity.setNumberOfServings(recipe.getNumberOfServings());
