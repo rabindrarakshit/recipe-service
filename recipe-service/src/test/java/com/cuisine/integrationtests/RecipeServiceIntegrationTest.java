@@ -29,7 +29,7 @@ public class RecipeServiceIntegrationTest {
     private TestRestTemplate restTemplate;
 
     @Test
-    public void testAddEmployee() {
+    public void testAddRecipe() {
         Recipe recipe = getObject("src/test/resources/recipe.json", Recipe.class);
         ResponseEntity<String> responseEntity = this.restTemplate
                 .postForEntity("http://localhost:" + port + "/recipes", recipe, String.class);

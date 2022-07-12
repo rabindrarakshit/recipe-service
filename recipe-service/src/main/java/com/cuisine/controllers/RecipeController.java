@@ -67,8 +67,7 @@ public class RecipeController {
     @RequestMapping(method = RequestMethod.POST)
     @ApiResponses(
             value = {
-                    @ApiResponse(responseCode = "201", description = HTTP_RESPONSE_201_DESCRIPTION, content = @Content(mediaType = "application/json", schema =
-                    @Schema(implementation = ErrorResponse.class))),
+                    @ApiResponse(responseCode = "201", description = HTTP_RESPONSE_201_DESCRIPTION, content = @Content(mediaType = "application/json")),
                     @ApiResponse(responseCode = "400", description = HTTP_RESPONSE_400_DESCRIPTION, content = @Content(mediaType = "application/json", schema =
                     @Schema(implementation = ErrorResponse.class)))})
     public ResponseEntity createRecipe(@RequestBody Recipe recipe) {
